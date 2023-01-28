@@ -1,0 +1,210 @@
+/* 오늘의 쇼핑 제안 */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 1022px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+header picture img {
+  width: 176px;
+  height: 40px;
+}
+
+.logo {
+  width: 100%;
+  margin: 0;
+}
+
+.logo a {
+  display: block;
+  width: inherit;
+}
+
+section {
+  width: 1022px;
+  margin: 0 auto;
+  margin-top: 48px;
+}
+
+.section-title {
+  height: 30px;
+  margin: 0;
+  margin-bottom: 24px;
+  padding-left: 30px;
+  font-size: 24px;
+  font-weight: var(--font-weight-medium);
+  background-image: url(/assets/icon/shopping.svg);
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: contain;
+}
+
+.item-card-list {
+  display: flex;
+  justify-content: flex-start;
+  width: 1020px;
+  height: 270px;
+  margin: 0 auto;
+}
+
+.item-card {
+  position: relative;
+}
+
+#discount30::before {
+  content: "30%";
+  position: absolute;
+  float: left;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 53px;
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: var(--font-weight-semi-bold);
+  border-end-end-radius: 5px;
+  background-color: var(--color-red-500);
+}
+
+#discount10::before {
+  content: "10%";
+  position: absolute;
+  float: left;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 53px;
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: var(--font-weight-semi-bold);
+  border-end-end-radius: 5px;
+  background-color: var(--color-red-500);
+}
+
+#discount25::before {
+  content: "25%";
+  position: absolute;
+  float: left;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 53px;
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: var(--font-weight-semi-bold);
+  border-end-end-radius: 5px;
+  background-color: var(--color-red-500);
+}
+
+.item-card-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.item-card-details {
+  margin: 12px 14px 18px 14px;
+}
+
+.item-card-title {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+}
+
+.item-card-delivery {
+  margin-bottom: 4px;
+  color: var(--color-gray-700);
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+}
+
+.item-card-rating {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 68px;
+  height: 12px;
+  background-image: url(/assets/sprites/rating-stars.png);
+}
+
+#item01 {
+  background-position-y: -18.7%;
+}
+#item01::after {
+  content: "(3,255)";
+  position: absolute;
+  float: left;
+  left: 72px;
+  color: var(--color-gray-700);
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+}
+
+#item02 {
+  background-position-y: -18.7%;
+}
+#item02::after {
+  content: "(1,807)";
+  position: absolute;
+  float: left;
+  left: 72px;
+  color: var(--color-gray-700);
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+}
+
+#item03 {
+  background-position-y: -28.5%;
+}
+#item03::after {
+  content: "(2,423)";
+  position: absolute;
+  float: left;
+  left: 72px;
+  color: var(--color-gray-700);
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+}
+
+#item04 {
+  background-position-y: -8.6%;
+}
+#item04::after {
+  content: "(1,009)";
+  position: absolute;
+  float: left;
+  left: 72px;
+  color: var(--color-gray-700);
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+}
+
+#item05 {
+  background-position-y: -28.5%;
+}
+#item05::after {
+  content: "(3,203)";
+  position: absolute;
+  float: left;
+  left: 72px;
+  color: var(--color-gray-700);
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+}

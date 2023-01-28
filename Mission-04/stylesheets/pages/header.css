@@ -1,0 +1,418 @@
+/* 헤더 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* ------------- */
+/* login-bar 영역 */
+/* ------------- */
+.login-bar {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 34px;
+  background-color: var(--color-gray-100);
+}
+.login-bar-link-list {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 1020px;
+  list-style: none;
+  font-size: 12px;
+}
+.login-bar-link {
+  margin: 0 8px;
+}
+.login-bar-link:nth-child(2) {
+  margin: 0;
+}
+.login-bar-link:nth-child(4) {
+  position: absolute;
+  left: 0;
+  margin-right: 0;
+}
+.login-bar-link:last-child {
+  position: absolute;
+  left: 64px;
+}
+
+/* ------------------- */
+/* header-section 영역 */
+/* ------------------- */
+.header-section {
+  position: absolute;
+  top: 34px;
+  display: grid;
+  grid-template-rows: 74px 26px;
+  grid-template-columns: 110px 180px 516px 45px 45px;
+  row-gap: 10px;
+  column-gap: 36px;
+  width: 1020px;
+  height: 116px;
+}
+/* 카테고리 버튼 */
+.header-section:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+/* 쿠팡 로고 */
+.header-section:nth-child(2) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+/* 검색창 */
+.header-section:nth-child(3) {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+/* 마이쿠팡 */
+.header-section:nth-child(4) {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+/* 장바구니 */
+.header-section:nth-child(5) {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+/* 하단 메뉴 리스트 */
+.header-section:nth-child(6) {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+/* 카테고리 버튼 */
+.button--category {
+  position: relative;
+  justify-content: center;
+  width: 110px;
+  height: 116px;
+  color: var(--color-white);
+  font-size: 12px;
+  border: 0;
+  background-image: url("/assets/icon/hamburger.svg");
+  background-repeat: no-repeat;
+  background-position: center 30px;
+  background-color: var(--color-blue-600);
+}
+.button--category span {
+  position: absolute;
+  bottom: 30px;
+  left: 32.5px;
+  margin: 0;
+  color: var(--color-white);
+}
+
+/* 쿠팡 로고 */
+.logo {
+  width: 176px;
+  height: 40px;
+  margin: 0;
+  margin: 34px 0 0 4px;
+  background-size: 100%;
+  background-image: url("/assets/logo/logo.svg");
+}
+.logo a {
+  width: inherit;
+  /* height: inherit; */
+  height: 30px;
+}
+.logo span {
+  overflow: hidden;
+  border: 0;
+  width: inherit;
+  height: inherit;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  display: inline-block;
+}
+
+/* 검색창 */
+.header-search-form {
+  display: flex;
+  width: 516px;
+  height: 40px;
+  margin: 34px 0 0 -6px;
+  border: 1px solid var(--color-blue-600);
+  background-color: var(--color-white);
+}
+.search-form-category-wrapper {
+  position: relative;
+  width: 135px;
+}
+.header-search-form select::-ms-expand {
+  display: none;
+}
+.header-search-form select {
+  appearance: none;
+  -webkit-appearance: none; /* 사파리, 크롬 하위 버전 용 */
+  -moz-appearance: none; /* 사파리, 크롬 하위 버전 용 */
+  width: 135px;
+  height: 38px;
+  border: 0;
+  padding: 12px 0 12px 12px;
+  font-size: 12px;
+  color: var(--color-gray-700);
+  border-right: 1px solid var(--color-gray-100);
+  z-index: 10;
+}
+#searchFormCategorySVG {
+  position: absolute;
+  top: 13px;
+  right: 17px;
+  pointer-events: none;
+}
+.header-search-form select:focus {
+  outline-style: none;
+}
+.header-search-form input {
+  width: 301px;
+  height: 38px;
+  padding: 12px 0 12px 20px;
+  border: 0;
+}
+.header-search-form input::placeholder {
+  font-size: 12px;
+  color: var(--color-gray-600);
+}
+.header-search-form input:focus {
+  outline: none;
+}
+.header-search-form button {
+  width: 40px;
+  height: 38px;
+  border: 0;
+  background-color: transparent;
+}
+#voiceSearchButton {
+  background-image: url("/assets/icon/mic.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#keywordSearchButton {
+  background-image: url("/assets/icon/search.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/* 텍스트가 화면에는 안 보이지만, 스크린 리더는 인식 가능토록 */
+.header-search-form button span {
+  overflow: hidden;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  display: inline-block;
+}
+
+/* 마이쿠팡 */
+.myCoupang {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 45px;
+  height: 58px;
+  margin-top: 29px;
+  margin-left: -14px;
+  font-size: 12px;
+}
+.myCoupang button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  padding-top: 40px;
+  border: 0;
+  background-color: transparent;
+  background-image: url("/assets/icon/my-coupang.svg");
+  background-repeat: no-repeat;
+  background-position: center 7px;
+  z-index: 1;
+}
+.myCoupang ul {
+  position: relative;
+  display: none;
+  text-align: center;
+  z-index: 100;
+}
+.myCoupang a {
+  display: block;
+  width: 50px;
+  margin-bottom: 12px;
+}
+.myCoupang li:last-child {
+  margin-bottom: 0;
+}
+.is--active ul {
+  display: block;
+  height: 100px;
+  margin: 68px 0 0 0;
+  padding: 15px 15px;
+  font-size: 12px;
+  list-style: none;
+  border: 1px solid var(--color-gray-100);
+  background-color: var(--color-white);
+}
+.is--active ul::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 40%;
+  width: 0;
+  height: 0;
+  border-color: var(--color-white) transparent;
+  border-style: solid;
+  border-width: 0 6px 8px 6.5px;
+  z-index: 1;
+}
+.is--active ul::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 40%;
+  border-color: var(--color-gray-100) transparent;
+  border-style: solid;
+  border-width: 0 6px 8px 6.5px;
+  z-index: 0;
+}
+
+/* 장바구니 */
+.cart {
+  position: relative;
+  width: 45px;
+  height: 58px;
+  margin-left: -36px;
+  margin-top: 29px;
+  font-size: 12px;
+}
+.cart button {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  padding-top: 40px;
+  border: 0;
+  background-color: transparent;
+  background-image: url("/assets/icon/cart.svg");
+  background-repeat: no-repeat;
+  background-position: center 6px;
+}
+.selected-item-count {
+  position: absolute;
+  float: top;
+  top: 1px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  color: var(--color-white);
+  font-size: 12px;
+  background-color: var(--color-blue-600);
+}
+.cart-message {
+  position: relative;
+  display: none;
+  text-align: center;
+  z-index: 100;
+}
+.cart-message span {
+  display: block;
+  margin-top: 40px;
+}
+.cart--empty .cart-message {
+  display: block;
+  width: 300px;
+  height: 100px;
+  margin: 10px 0 0 -255px;
+  font-size: 12px;
+  border: 1px solid var(--color-gray-100);
+  background-color: var(--color-white);
+}
+.cart--empty .cart-message::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 5%;
+  width: 0;
+  height: 0;
+  border-color: var(--color-white) transparent;
+  border-style: solid;
+  border-width: 0 6px 8px 6.5px;
+  z-index: 1;
+}
+.cart--empty .cart-message::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 5%;
+  border-color: var(--color-gray-100) transparent;
+  border-style: solid;
+  border-width: 0 6px 8px 6.5px;
+  z-index: 0;
+}
+
+/* 하단 메뉴 리스트 */
+.header-bottom-link-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  margin-left: 145px;
+  padding: 0;
+  width: 755px;
+  height: 26px;
+  list-style: none;
+}
+.header-bottom-link {
+  display: inline-block;
+  height: inherit;
+  margin-right: 2px;
+  font-size: 12px;
+}
+.header-bottom-link:last-child {
+  margin-right: 0;
+}
+.header-bottom-link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14px;
+  margin: 6px 14px;
+}
+.header-bottom-link img {
+  margin-right: 4px;
+}
+.header-bottom-link img:last-child {
+  margin: 0;
+  margin-left: 4px;
+}

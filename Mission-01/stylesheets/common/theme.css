@@ -1,0 +1,12 @@
+/* Theme 스타일 작성 */
+/* 피그마 시안 color 시스템을 참고하여 변수로 선언 */
+
+:root {
+  --title-medium-24: 24px;
+  --title-medium-16: 16px;
+  --gray-800: #4e4e4e;
+  --gray-600: #aaa9a9;
+  --gray-500: #c4c4c4;
+  --gray-100: #f3f3f3;
+  --blue-600: #0074e9;
+}

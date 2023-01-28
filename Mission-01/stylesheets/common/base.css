@@ -1,0 +1,12 @@
+/* Base 스타일 작성 */
+/*
+1. box-sizing 속성을 border-box로 지정
+2. 기본 글자 크기 및 웹폰트 선언
+*/
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 24px;
+}

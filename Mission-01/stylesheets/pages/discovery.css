@@ -1,0 +1,212 @@
+/* CSS 작성 */
+/* 오늘의 발견 페이지 스타일 */
+
+/* 로고를 포함한 헤더 영역, 오늘의 발견 섹션 가운데 배치 구현 조건 */
+.container {
+  margin: 0 auto;
+  margin-bottom: 234px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 48px;
+}
+
+.logo {
+  width: 1020px;
+  margin: 0;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.section-title {
+  display: flex;
+  justify-content: start;
+  width: 1020px;
+  height: 28px;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.section-title p {
+  margin: 0;
+}
+
+.section-title-head {
+  display: flex;
+  align-items: center;
+  font-size: var(--title-medium-24);
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 27.6px;
+}
+.section-title-head span {
+  margin: 0 10px 0 10px;
+  font-size: 20px;
+  color: var(--gray-600);
+}
+
+.section-title-sub {
+  font-size: var(--title-medium-16);
+  color: var(--gray-600);
+  line-height: 18.4px;
+}
+
+.item-list-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 16px;
+  justify-content: stretch;
+  width: 1020px;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--gray-500);
+  background-color: #fff;
+}
+.item-link {
+  width: 100%;
+  height: 100%;
+}
+#itemImg01,
+#itemImg02 {
+  padding: 20px 28px;
+}
+#itemImg03,
+#itemImg04,
+#itemImg05,
+#itemImg06,
+#itemImg08,
+#itemImg09 {
+  padding: 14px 22px 14px 21px;
+}
+#itemImg07 {
+  padding: 20px 28px;
+}
+.item:hover {
+  border: 1px solid var(--blue-600);
+}
+
+.item-link:focus {
+  outline: none;
+  border: 1px solid var(--blue-600);
+}
+
+.item::after {
+  content: "";
+  transition: all 0.3s ease;
+}
+.item:hover::after {
+  content: "구매하기   >";
+  position: absolute;
+  float: left;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 112px;
+  height: 42px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  background-color: var(--blue-600);
+}
+.item-link::after {
+  content: "";
+  transition: all 0.3s ease;
+}
+.item-link:focus::after {
+  content: "구매하기   >";
+  position: absolute;
+  float: left;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 112px;
+  height: 42px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  border: 0;
+  background-color: var(--blue-600);
+  z-index: 10;
+}
+
+.move-to-item-link {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  bottom: 20px;
+  left: 20px;
+  width: 42px;
+  height: 42px;
+  text-decoration-line: none;
+  color: white;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.move-to-item-link p {
+  margin: 0;
+  padding: 16px 18px;
+}
+.move-to-item-link:focus::after {
+  content: "구매하기   >";
+  position: absolute;
+  float: left;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 112px;
+  height: 42px;
+  color: white;
+  outline: none;
+  background-color: var(--blue-600);
+  z-index: 10;
+}
+
+.item:nth-child(1) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+.item:nth-child(2) {
+  grid-column: 3 / 5;
+  grid-row: 1 / 2;
+}
+.item:nth-child(3) {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.item:nth-child(4) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+.item:nth-child(5) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+.item:nth-child(6) {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+.item:nth-child(7) {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+}

@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(214, 189, 193);
+}
+/* mobile First */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 768px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: palegreen;
+}
+
+nav {
+  /* width: 120px; */
+  flex-basis: 120px;
+  color: #fff;
+  background-color: rgb(58, 106, 84);
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  /* align-content: stretch; */
+  background-color: skyblue;
+}
+.box {
+  /* width: 50%; */
+  flex-basis: 50%;
+  flex-grow: 1;
+  min-height: 150px;
+  font-size: 20px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(253, 232, 205);
+}
+.box:nth-child(odd) {
+  border: 3px solid blue;
+}
+.box:nth-child(even) {
+  border: 3px solid orange;
+}
+
+footer {
+  /* width: 100%; */
+  flex-basis: 100%;
+  /* flex-grow: 1; */
+  min-height: 80px;
+  color: #fff;
+  background-color: rgb(192, 81, 96);
+}
+
+/* default Desktop으로 설정하고 작성 */
+/* for Desktop */
+@media screen and (min-width: 1024px) {
+  /* 위에 스타일링 내용이 Desktop을 생각하고 작성한 것! */
+}
+/* for Tablet */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+/* for Mobile */
+@media screen and (max-width: 480px) {
+  
+    .box-container {
+      flex-direction: column;
+   
+  /* .box {
+    flex-basis: 100%;
+  } */
+}
